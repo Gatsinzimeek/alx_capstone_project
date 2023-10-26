@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" href="images/gda.png">
+	<!-- This is the link for our css style code -->
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Budget Tracker</title>
+</head>
+<body>
+
+	<!------------------------------- These are code for popup modal  ----------------------->
+	<section class="modal">
+			<span class="close-btn">X</span>
+				<form class="income-data">
+					<p class="Error-msg"></p>
+					<label>Name/Description: </label>
+					<input id="Name" type="text" name="" placeholder="Enter your Transaction">
+					<label>Amount: </label>
+					<input id="Amount" type="number" name="" placeholder="Enter your Amount">
+					<label>Date: </label>
+					<input id="Dat" type="date" name="" placeholder="">
+					<label>Choose Category:</label>
+					<select name="" id="Category">
+						<option>Medical</option>
+						<option>Salary</option>
+						<option>Utilities</option>
+						<option>Transport</option>
+						<option>Housing</option>
+						<option>Foods</option>
+						<option>Entertainment</option>
+						<option>Investment</option>
+					</select>
+					<button type="button" id="Recod-Btn">Record Data</button>
+					<button type="button" id="update-Btn">Update Data</button>
+				</form>
+	</section>
+	<div class="dashboard">
+		<!-- This section of all Activity that made for individual Budget  -->
+		<header class="header">
+			<center><img src="images/log.jpeg"></center>
+			<h1>Budget Tracker</h1>
+			<div class="nav-menu">
+					<button id="Income">Add Income</button>
+					<button id="Expense">Add Expense</button>
+					<button onclick="GenerateReport()">Save Data</button>
+			</div>
+		</header>
+		<!--This main section of all transaction happen on indivudual Budget -->
+		<main class="transaction-container" id="main">
+			<section class="details">
+				<h1>All Transaction:</h1>
+				<table class="table-detail" id="bth">
+					<thead>
+						<tr>
+							<th>Date</th>
+							<th>Description</th>
+							<th>Amount</th>
+							<th>Categories</th>
+							<th>Operation</th>
+						</tr>
+					</thead>
+					<tbody id="Table-body">
+
+					</tbody>
+				</table>
+			</section>
+			<section class="Monthly-total">
+				<h1>Monthly Total:</h1>
+				<table class="table-detail">
+					<thead>
+						<tr>
+							<th>Categories</th>
+							<th>Amount</th>
+						</tr>
+					</thead>
+					<tbody id="Table-body">
+						<tr>
+							<td>Investment</td>
+							<td>+$<span id="invested">0</span></td>
+						</tr>
+						<tr>
+							<td>Medical</td>
+							<td class="maximize">-$<span id="Medical">0</span></td>
+						</tr>
+						<tr>
+							<td>Salary</td>
+							<td>+$<span id="salary">0</span></td>
+						</tr>
+						<tr>
+							<td>Utilities</td>
+							<td class="maximize">-$<span id="utility">0</span></td>
+						</tr>
+						<tr>
+							<td>Transport</td>
+							<td class="maximize">-$<span id="Transport">0</span></td>
+						</tr>
+						<tr>
+							<td>Housing</td>
+							<td class="maximize">-$<span id="Housing">0</span></td>
+						</tr>
+						<tr>
+							<td>Foods</td>
+							<td class="maximize">-$<span id="Foods">0</span></td>
+						</tr>
+						<tr>
+							<td>Entertainment</td>
+							<td class="maximize">-$<span id="Entertainment">0</span></td>
+						</tr>
+						<tr>
+							<td><h1>Available Balance  =</h1></td>
+							<td>$<span id="Balance">0</span></td>
+						</tr>
+					</tbody>
+				</table>
+			</section>
+			<div class="total-detail">
+					<div class="total">
+						<h3>Total Income</h3>
+						<p>$<span id="total-Income">0</span></p>
+					</div>
+					<div class="total">
+						<h3>Total Expense</h3>
+						<p>$<span id="total-expense">0</span></p>
+					</div>
+					<div class="total">
+						<h3>Saving</h3>
+						<p>$<span id="total-Saving">0</span></p>
+					</div>
+			</div>
+			<section class="visual-rep">
+				<div class="grap">
+					<canvas id="myChart" width="400px"></canvas>
+				</div>
+			</section>
+		</main>
+	</div>
+	<center><footer><p>Copyright &copy; Designed By Gatsinzi Ernest</p></footer></center>
+	<!-----------------------------------------This cnd link for provide graph on our screen------------>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+	<!-----------------------------------------This cnd link for generating report on our screen------------>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+	<script type="text/javascript" src="main.js"></script>
+</body>
+</html>

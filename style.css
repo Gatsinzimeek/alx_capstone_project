@@ -1,0 +1,298 @@
+
+/* ============================= All material we always using in our stlye code ================== */
+*{
+	padding: 0;
+	margin: 0;
+}
+:root{
+	--titleColor: #004242;
+	--butn-bg: linear-gradient(-180deg, #FF7B21, #D72C03);
+	--shadow-color: rgba(0, 0, 0, 0.2);
+	--butn-color: white;
+	--font-family: arial, 'sans-serif';
+}
+
+body{
+	background: #f5f5f5;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+
+button{
+	background: var(--butn-bg);
+	margin: 20px auto;
+	border: none;
+	padding: 15px;
+	width: 75%;
+	border-radius: 25px;
+	font-size: 18px;
+	color: var(--butn-color);
+	font-family: var(--font-family);
+	cursor: pointer;
+	box-shadow: 0 0 4px 3px var(--shadow-color);
+}
+
+button:hover{
+	transition: all 2s;
+	background: var(--titleColor);
+}
+
+h1{
+	color: var(--titleColor);
+	font-weight: 530;
+	font-family: var(--font-family);
+	margin-bottom: 10px;
+}
+
+
+
+
+ /* Styles for Popup Modal */
+.modal{
+	position: fixed;
+	background: black;
+	top: 0;
+	left: 0;
+	width: 100%;
+ 	height: 100%;
+	z-index: 500;
+	opacity: 0.96;
+	display: none;
+}
+
+ .income-data{
+ 	width: 25%;
+ 	margin: 50px auto;
+ 	background: white;
+ 	font-size: 18px;
+ 	color: var(--titleColor);
+ 	padding: 20px 20px;
+ 	display: grid;
+ 	border-radius: 10px;
+
+ }
+
+ .Error-msg{
+ 	margin-left: 10px;
+ 	text-align: center;
+ 	color: darkred;
+ 	font-size: 18px;
+ 	font-family: var(--font-family);
+ 	display: none;
+ 	margin-bottom: 20px;
+ 	padding: 13px;
+ 	border-radius: 14px;
+ 	background-color: var(--shadow-color);
+ }
+
+.income-data label{
+	font-family: var(--font-family);
+	margin: 10px;
+}
+
+.income-data input,select{
+	margin: 10px;
+	background: #ebeef0!important;
+	padding: 16px;
+	border-radius: 10px;
+	border: none;
+	width: 80%;
+	font-size: 15px;
+	outline: none;
+}
+
+
+.close-btn{
+	position: absolute;
+	top: 20px;
+	color: white;
+	border: none;
+	cursor: pointer;
+	font-size: 30px;
+	font-family: arial;
+	right: 30px;
+}
+
+.close-btn:hover{
+	color: #FF7B21;
+}
+/* ============================= This style for our main part of our body ================== */
+.dashboard{
+	display: grid;
+	grid-template-columns: 1fr 4.5fr;
+	padding: 0px 20px;
+	gap: 20px;
+	overflow-wrap: inherit;
+}
+
+
+/* ============================================ These are code for  header part ============================= */
+
+.header{
+	background-color: white;
+	padding: 20px;
+	border-radius: 25px;
+	opacity: 0.90;
+	margin-top: 20px;
+ 	box-shadow: 0px 0px 5px 5px var(--shadow-color);
+
+}
+
+.header img{
+	width: 80px;
+}
+
+
+.header h1{
+	text-align: center;
+}
+
+.nav-menu{
+	text-align: center;
+	margin-top: 20px;
+	display: grid;
+}
+
+
+
+ /* -------------------------------------------- Styles for Transition section part of  main in our body */
+.transaction-container{
+	display: grid;
+	grid-template-columns: 1.7fr 1fr;
+	background: white;
+	width: 90%;
+	opacity: 0.90;
+	border-radius: 25px;
+	margin-top: 20px;
+	box-shadow: 0 0 5px 5px var(--shadow-color);
+	padding: 20px 40px;
+	gap: 20px;
+}
+
+.table-detail{
+	width: 100%;
+	font-family: var(--font-family);
+	border-collapse: collapse;
+	box-shadow: 0 0 3px 3px var(--shadow-color);
+	border-radius: 4px
+}
+
+.table-detail th{
+  background-color: #333;
+  color: white;
+  font-weight: bold;
+}
+
+.table-detail td,th{
+	padding: 10px 4px;
+}
+.table-detail tr{
+	border: 1px solid var(--shadow-color);
+}
+
+.operation {
+	width: 16%;
+	margin-left: 10px;
+	cursor: pointer;
+}
+
+#update-Btn{
+	display: none;
+}
+.total{
+	font-family: var(--font-family);
+	background-color: var(--titleColor);
+ 	margin: 20px 10px;
+ 	text-align: center;
+ 	color: white;
+ 	padding: 10px;
+ 	border-radius: 20px;
+ 	box-shadow: 0 0 10px 5px var(--shadow-color);
+}
+
+.total h3{
+	font-size: 25px;
+	font-weight: 400;
+}
+
+.total p{
+	font-size: 23px;
+}
+
+.maximize{
+	color: red;
+}
+
+ /* ========================================== Styles for graph visualization part of our page ========================= */
+
+
+
+.visual-rep{
+	width: 100%;
+ 	box-shadow: 0 0 10px 5px var(--shadow-color);
+ 	border-radius: 20px;
+ 	margin: 10px;
+}
+
+.total-detail{
+	width: 100%;
+	margin: auto;
+}
+
+
+
+
+ /* Styles for footer part of our page */
+footer{
+	background: var(--titleColor);
+	border-radius: 25px;
+	padding: 10px 0px;
+	width: 96%;
+	margin-top: 10px;
+	color: white;
+	font-size: 16px;
+	font-family: var(--font-family);
+	box-shadow: 0 0 3px 1px var(--shadow-color);
+}
+
+/* Styles for mobile devices */
+@media (min-width: 368px) and (max-width: 768px) {
+	
+	.income-data{
+		width: 70%;
+	}
+  	.dashboard{
+  		display: block;
+  	}
+  	.transaction-container{
+  		display: grid;
+  		grid-template-columns: 2fr;
+  		justify-content: center;
+		margin: 20px auto;
+	}
+}
+/* Styles for tablet devices */
+@media (min-width: 768px) and (max-width: 1200px){
+  	
+  	.header{
+  		margin: auto;
+  		width: 50%;
+  	}
+
+	.income-data{
+		width: 70%;
+	}
+  	.dashboard{
+  		display: block;
+  	}
+  	.transaction-container{
+		display: grid;
+		grid-template-columns: 2fr;
+		margin: 20px auto;
+		width: 65%;
+	}
+	footer{
+		width: 70%;
+	}
+}
