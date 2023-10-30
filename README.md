@@ -18,6 +18,7 @@
 - Git: Version control system for project management.
 
 ## Screenshots or Demo
+![myflowchart](https://github.com/Gatsinzimeek/alx_capstone_project/assets/87667335/aefccbd2-87e9-4065-b75a-915f8d49bc79)
 
 
 Demo: Live Demo
